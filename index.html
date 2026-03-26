@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopHub - Premium Online Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🛍️</span>
+                    <h1>ShopHub</h1>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search products..." class="search-input">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="header-actions">
+                    <button class="icon-btn">❤️</button>
+                    <button class="icon-btn cart-btn">
+                        🛒
+                        <span class="cart-badge" id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Banner -->
+    <section class="banner">
+        <div class="banner-content">
+            <h2 class="banner-title">Summer Sale</h2>
+            <p class="banner-subtitle">Up to 50% off on selected items</p>
+            <button class="banner-btn">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories" id="categories"></div>
+        </div>
+    </section>
+
+    <!-- Filters & Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-header">
+                <h2 class="section-title">All Products</h2>
+                <div class="filter-controls">
+                    <button class="filter-btn" id="filterBtn">
+                        <span>🔽</span> Filters
+                    </button>
+                    <select id="sortSelect" class="sort-select">
+                        <option value="default">Sort by</option>
+                        <option value="priceLowHigh">Price: Low to High</option>
+                        <option value="priceHighLow">Price: High to Low</option>
+                        <option value="ratingHighLow">Rating: High to Low</option>
+                        <option value="nameAZ">Name: A to Z</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Filter Panel -->
+            <div class="filter-panel" id="filterPanel">
+                <div class="filter-group">
+                    <h3>Price Range</h3>
+                    <div class="price-range">
+                        <input type="range" id="minPrice" min="0" max="100000" value="0" class="range-slider">
+                        <input type="range" id="maxPrice" min="0" max="100000" value="100000" class="range-slider">
+                        <div class="price-labels">
+                            <span id="minPriceLabel">₹0</span>
+                            <span id="maxPriceLabel">₹100,000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Rating</h3>
+                    <div class="rating-filters">
+                        <label class="rating-option">
+                            <input type="radio" name="rating" value="all" checked>
+                            <span>All Ratings</span>
+                        </label>
+                        <label class="rating-option">
+                            <input type="radio" name="rating" value="4">
+                            <span>⭐ 4+ Stars</span>
+                        </label>
+                        <label class="rating-option">
+                            <input type="radio" name="rating" value="3">
+                            <span>⭐ 3+ Stars</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button class="apply-filters-btn" id="applyFilters">Apply Filters</button>
+                <button class="clear-filters-btn" id="clearFilters">Clear All</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products" id="productList"></div>
+            
+            <!-- No Results Message -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <p>😔 No products found</p>
+                <button class="clear-filters-btn" onclick="clearAllFilters()">Clear Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ShopHub</h3>
+                    <p>Your one-stop shop for everything</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#">📘</a>
+                        <a href="#">📷</a>
+                        <a href="#">🐦</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ShopHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
