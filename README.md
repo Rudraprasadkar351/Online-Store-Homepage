@@ -239,10 +239,6 @@ This project is created for educational purposes as part of an internship task.
 - Google Fonts for typography
 
 ---
-
-**Created by**: [Your Name]  
-**Date**: March 2026  
-**Duration**: 10 Days  
-**Status**: ✅ Complete
+: ✅ Complete
 
 For any questions or improvements, feel free to contribute or reach out!
